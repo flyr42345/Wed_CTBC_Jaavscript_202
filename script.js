@@ -85,3 +85,71 @@ console.log("%c判斷式", "color:gold");
 if (false) {
     console.log("這裡是判斷式");
 }
+
+let score = 0;
+
+if (score >= 60) {
+    console.log("你及格了");
+}
+else if (score >= 50) {
+    console.log("來補考");
+}
+else {
+    console.log("你被當了");
+}
+
+let hp = 70;
+
+if (hp <= 0) {
+    console.log("死亡");
+}
+else if (hp <= 60) {
+    console.log("警告");
+}
+else {
+    console.log("安全");
+}
+
+console.log("%c迴圈", "color:gold");
+
+// for迴圈
+// for語法:
+// (初始值; 條件;迭代器;){程式區塊}
+for (let index = 0; index < 10; index++) {
+    console.log("迴圈", index);
+}
+
+
+let letCount = 1;
+letCount = 2;
+letCount = 3;
+
+const constCount = 1;
+// constCount = 2; 產生錯誤，常數不可變
+const PI = 3.14;
+const WEB_FONT_SIZE = 24;
+
+var varCount = 1;
+varCount = 123;
+var varCount = 3;
+console.log(varCount);
+{
+    let letTest = 1;
+    const constTest = 1;
+    var varTest = 1;
+    console.log("let:", letTest);
+    console.log("var:", varTest);
+    console.log("conat:", letTest);
+}
+console.log("var:", varTest);
+
+function logLing() {
+    console.log("%---我是分隔線---", "color:gold");
+
+}
+
+logLing();
+logLing();
+logLing();
+logLing();
+logLing();
