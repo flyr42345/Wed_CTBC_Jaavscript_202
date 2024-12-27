@@ -230,10 +230,26 @@ const square = function (number) {
 console.log(square(9));
 console.log(square(321));
 
+// 提升hosting
+// 在定義函式以前就能夠呼叫
+// 一般函式會提升
+console.log("一般函式",Math.floor(BMI(1.76,120)));
+// 表達式與箭頭函式不會提升，不能定義以前呼叫(相對安全)
 
-// 練習題
+
+// 練習題:表達式
 const BMI = function(height,weight){
-    return weight / (height * height);
+    return weight / square(height);
 }
+console.log(Math.floor(BMI(1.76,120)));
+// 一般函式
+function bmi(weight,height){
+    return weight / square(height);
+}
+console.log(Math.floor(bmi(100,1.9)));
 
-console.log(BMI(1.76,120));
+// 箭頭函式 =>
+const bmiArrow = (height,weight) => {
+    return weight / square(height);
+}
+console.log(Math.floor(bmiArrow(1.76,120)));
